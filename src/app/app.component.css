@@ -1,0 +1,17 @@
+
+
+.navbar{
+    background-color: currentColor;
+
+}
+.navbar li a {
+    color: white;
+
+}
+.navbar-right{
+    margin-right: 30%;
+}
+.navbar-brand{
+    color:white;
+    font-family: elephant;
+}

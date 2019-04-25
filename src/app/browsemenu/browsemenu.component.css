@@ -1,0 +1,33 @@
+
+li {
+    left: 0;
+    list-style-type: none;
+    display: inline;
+    
+  }
+ 
+  #description{
+    text-align: center;
+  }
+  .mydivoverlap{
+    position: relative;
+    z-index: 1;
+    }
+    .mybuttonoverlap{
+    position: absolute;
+    z-index: 2;
+    top: 44px;
+    display: none;
+    left: 59px;	
+    }
+   .mydivouter:hover .mybuttonoverlap{ 
+    display:block;
+    margin-left: 20%;
+    margin-top: 10%;
+    }
+    .btn-lg{
+      color: black;
+    }
+    img{
+    width: 100%;
+   }

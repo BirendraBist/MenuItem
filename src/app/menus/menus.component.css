@@ -1,0 +1,26 @@
+.mydivoverlap{
+    position: relative;
+    z-index: 1;
+    }
+    .mybuttonoverlap{
+    position: absolute;
+    z-index: 2;
+    top: 44px;
+    display: none;
+    left: 59px;	
+    }
+   .mydivouter:hover .mybuttonoverlap{ 
+    display:block;
+    margin-left: 20%;
+    margin-top: 10%;
+    }
+
+    h2,h4{
+        text-align: center;
+    }
+    img{
+    width: 100%;
+    }
+    #description{
+        text-align: center;
+    }

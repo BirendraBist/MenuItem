@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+
+<body>
+  <section id="resturantmenu">
+     
+          <h2>"Good Food is Good Mood!!" </h2>
+          <h4>All Family Tradition Recipes, Everything is Fresh HomeMade From Scratch</h4>
+      
+    
+    <div class="container">
+      <div class="row">
+         <div class="col-md-4 col-sm-6" *ngFor="let menu of menus">  <!--ngFor is like foreach loop in c-sharp -->
+          <div class="media-object">
+            <div class="mydivouter" >
+              <img src="{{ menu.imageUrl}}">
+              <input type="button" class="mybuttonoverlap btn btn-info btn-lg" value="View Details" routerLink="/detail/{{menu.id}}"/> 
+            </div>
+          </div>
+          <div id="description">
+            <span class="badge">{{menu.id}}</span><span>{{menu.name}} </span>
+            <app-rating [rating]="menu.rating" [numOfReviews]="menu.numOfReviews"> -->
+             </app-rating> 
+            <div><span>Price:{{menu.Price }}</span></div>
+            
+          </div>
+         
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- <app-menu-detail [menu]="selectedMenu"></app-menu-detail> -->
+</body>
+
+</html>
