@@ -1,13 +1,13 @@
 h1{
     text-align: center;
 }
-.badge{
+/* .badge{
     height: 30px;
     font-size: 20px;
     color:white;
     background: red;
-}
-/* #pulse-button {
+} */
+#pulse-button {
 
     position: relative;
     border: none;
@@ -33,4 +33,4 @@ h1{
   @-webkit-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(32, 76, 61, 0);}}
   @-moz-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
   @-ms-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
-  @keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}} */
+  @keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}

@@ -2,16 +2,85 @@
 
 .navbar{
     background-color: currentColor;
+    height: 60%;
 
 }
 .navbar li a {
-    color: white;
+    color: white;}
 
-}
 .navbar-right{
-    margin-right: 30%;
+    margin-right: 13%;
 }
 .navbar-brand{
+    background-color: black;
     color:white;
     font-family: elephant;
 }
+
+
+.home-div{   
+    position: relative;
+    display: inline-block;
+}
+
+
+.btn btn-info btn-lg{
+padding: 16px;
+font-size: 16px;
+cursor: pointer;
+}
+
+
+
+
+/* css footer-section */
+
+footer{
+    background-color: black;
+    height:200%;
+    margin-top: auto;
+}
+.footer-main-container{
+    margin: auto;
+}
+.up-btn{
+    background-color: gray;
+    align-content: center;
+    
+    
+}
+.up-btn a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    }
+        
+    .fa{
+        padding:20px;
+        font-size: 22px;
+        width: 60px;
+        text-align: center;
+        text-decoration: none;
+        margin: 1px 10px;
+        border-radius: 50%
+    }
+    .fa:hover{
+        opacity: 0.8;
+         
+       }
+       .fa-facebook{
+           background: #3B5998;
+           color: white;
+       } 
+       .fa-youtube {
+        background: #bb0000;
+        color: white;
+      }
+      .fa-instagram {
+        background: #ec6f35;
+        color: white;
+      }
+           
+      .information-container{
+          background-color: blanchedalmond;
+      }
