@@ -1,35 +1,34 @@
-
 <div style="text-align:center">
-    <body>
+
+  <body>
     <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          
-          <ul class="nav navbar-nav navbar-left">   
-           <li> <a routerLink = "/menus" class="glyphicon glyphicon-home"> Home</a> </li>
-           <li><a routerLink = "/browsemenu">BrowseMenu</a></li>
-            </ul> 
-            <ul class="nav navbar-nav navbar-right">   
-              <li><a routerLink= "/menu-crud">Menu-Crud</a></li>         
-           <li><a routerLink="/login">LogIn</a></li> 
-           <li><a routerLink="/signup">Create account</a></li> 
+      <div class="container-fluid">
 
-          </ul>
-        </div>     
-    
-    </nav>    
-   
-  <router-outlet></router-outlet>
+        <ul class="nav-home">
+          <li> <a routerLink="/menus" class="glyphicon glyphicon-home"> Home</a> </li>
 
-  <!-- footer-section -->
+        </ul>
 
-  <footer class="footer-container">
+        <ul class="navbar-nav">
+          <li><a routerLink="/menu-crud"*ngIf="isLoggedIn |async">Create Menu</a></li>
+          <li><a (click)="onLogout()" *ngIf="isLoggedIn | async">Logout</a></li>
+          <li><a routerLink="/login" *ngIf="!(isLoggedIn | async)">LogIn</a></li>
+          <li><a routerLink="/signup" *ngIf="!(isLoggedIn | async)">SignUp</a></li>
+        </ul>
+      </div>
+    </nav>
+    <router-outlet></router-outlet>
+
+    <!-- footer-section -->
+
+    <!-- <footer class="footer-container">
     <div class="footer-main-container">     
-
-    <!-- for up button -->
+  
+    
       <div class="up-btn">
         <a href="#"> ^ TOP OF PAGE</a>
       </div>
-<!-- media container -->
+
       <div class="media-container">
          
           <a herf="#" class="fa fa-facebook"></a> 
@@ -45,8 +44,7 @@
       </div>
     </div> 
        
-    </footer>
-  </body>
-  </div>
+    </footer> -->
 
- 
+  </body>
+</div>

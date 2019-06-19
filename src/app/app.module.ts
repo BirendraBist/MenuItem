@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core'; 
 
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  import { ToastrModule } from 'ngx-toastr';
+ import{AngularFireAuthModule} from 'angularfire2/auth';
+ import{AngularFireDatabaseModule} from 'angularfire2/database';
 
 import{AngularFireModule} from 'angularfire2';
  import {FormsModule} from '@angular/forms';
@@ -10,18 +13,17 @@ import{ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenusComponent } from './menus/menus.component';
-import { RatingComponent } from './rating/rating.component';
+
 import { MenudetailsComponent } from './menudetails/menudetails.component';
-import { BrowsemenuComponent } from './browsemenu/browsemenu.component';
 import { LoginComponent } from './login/login.component';
-import{AngularFireAuthModule} from 'angularfire2/auth';
 import { SignupComponent } from './signup/signup.component';
 import{AngularFirestoreModule} from 'angularfire2/firestore';
 import { MenuCrudComponent } from './menu-crud/menu-crud.component';
 import { MenuaddComponent } from './menu-crud/menuadd/menuadd.component';
 import { MenulistComponent } from './menu-crud/menulist/menulist.component';
-import{ShareService} from './share/share.service';
-
+import { auth } from 'firebase';
+import { AuthguardService } from './authguard.service';
+import { LoginService } from './login.service';
 export const firebaseConfig={
   apiKey: "AIzaSyDEQ_nPs6BJxljc26OznjInVChZ7a-sIz8",
   authDomain: "ecommerce-65d02.firebaseapp.com",
@@ -35,15 +37,13 @@ export const firebaseConfig={
   declarations: [
     AppComponent,
     MenusComponent,
-    RatingComponent,
     MenudetailsComponent,
-    BrowsemenuComponent,
-    LoginComponent,
+     LoginComponent,
     SignupComponent,
     MenuCrudComponent,
     MenuaddComponent,
     MenulistComponent,
-       
+    
   ],
   imports: [
     BrowserModule,    
@@ -52,13 +52,14 @@ export const firebaseConfig={
     ReactiveFormsModule,
     AngularFireAuthModule, 
     AngularFirestoreModule, 
+    AngularFireDatabaseModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),      
     AngularFireModule.initializeApp(firebaseConfig),
          
         
   ],
-  providers: [],
+  providers: [AuthguardService,LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

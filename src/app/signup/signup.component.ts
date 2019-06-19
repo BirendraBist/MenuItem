@@ -24,12 +24,13 @@ export class SignupComponent implements OnInit {
   }
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.invalidLoginMessage = params["invalidLoginMessage"];
+      this.invalidLoginMessage = params.invalidLoginMessage;
     });
   }
 
   onSignup() {
-    const result = this.loginService.signup(this.form.controls.username.value,
+    const result = this.loginService.signup(
+      this.form.controls.username.value,
       this.form.controls.password.value);
 
     if (!result) {

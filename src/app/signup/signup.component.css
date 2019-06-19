@@ -1,0 +1,28 @@
+h2{
+    margin-top: 20px;
+    text-align: center;
+}
+.container{
+margin-top: 20px;    
+ align-self: center;
+ width: 25%;
+ background-color:#76d3cbb4;
+ padding: 3%;
+ border-radius: 15px;
+}
+.form-group{
+    text-align: center; 
+}
+#password , #email{
+    font-weight: bold;
+    font-size: 20px;
+}
+.form-group input{
+    text-align: center;
+    
+}
+button{
+    align-content: center;
+    align-self: center;
+
+}

@@ -1,10 +1,10 @@
-<h1 class="display-4">Add-Menu</h1>
- <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">        <!-- #form is local reference -->
-  <input type="hidden" name="id" >
+<h3 >Add-Menu</h3>
+ <form  #form="ngForm" autocomplete="off" (submit)="onSubmit(form)"> <!-- #form is local reference -->
+  <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id" >
 
   <div class="form-group">
-    <input name="id" #id="ngModel" [(ngModel)]="service.formData.id" class="form-control" placeholder="id" required>
-    <div *ngIf="id.invalid && id.touched" class="validation-error">This field is required.</div>
+    <input name="itemid" #itemid="ngModel" [(ngModel)]="service.formData.itemid" class="form-control" placeholder="itemid" required>
+    <div *ngIf="itemid.invalid && itemid.touched" class="validation-error">This field is required.</div>
   </div>
 
   <div class="form-group">
@@ -24,9 +24,11 @@
   <div class="form-group">
     <input name="offer" #offer="ngModel" [(ngModel)]="service.formData.offer"  class="form-control" placeholder="offer (option)">
   </div>
+  <div class="form-group">
+    <input type="file" class="form-control" (change)="showPreview($event)" > 
+   </div>
 
   <div class="form-group">
     <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">SUBMIT</button>
   </div>
-
-</form>
+  </form>

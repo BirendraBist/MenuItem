@@ -4,25 +4,23 @@
   <div class="col-lg-5 col-sm-6">
   <div class="media-object">
     <div href="#">
-      <a href="{{menu.imageUrl}}">
-      <img src="{{ menu.imageUrl}}">
+      <a href="{{menu.data.imageUrl}}">
+      <img src="{{ menu.data.imageUrl}}">
     </a>
     </div> 
   </div>
   <div id="detailpage">
-    <div><span>Id:</span>{{menu.id}}</div>
-    <div><span>name:</span>{{menu.name }}</div>
-    <div><span>Price:</span>{{menu.Price}}</div>
-    <app-rating [rating]="menu.rating" [numOfReviews]="menu.numOfReviews">
-    </app-rating>
-    <div><span>Comments: {{menu.comments}}</span></div><br>
-    <div ><span  class="badge" id="pulse-button">{{menu.offer}}</span></div> 
+    <div><span>ItemID:</span>{{menu.data.itemid}}</div>
+    <div><span>name:</span>{{menu.data.name }}</div>
+    <div><span>Price:</span>{{menu.data.price}}</div>
+    
+    <div ><span  class="badge" id="pulse-button">{{menu.data.offer}}</span></div> 
    
   </div>  
 </div>
 <div class="col-lg-6 col-sm-8">
 <h3>Description</h3>
-    <div id="menudetail"><span>{{menu.description}}</span></div>
+    <div id="menudetail"><span>{{menu.data.description}}</span></div>
 </div>
 </div>
 </div>

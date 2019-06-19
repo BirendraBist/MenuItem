@@ -1,8 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {MenuService} from '../menu.service';
+import{ShareService} from '../share/share.service';
 import{Menu} from '../menu';
-
 
 @Component({
   selector: 'app-menudetails',
@@ -10,21 +9,18 @@ import{Menu} from '../menu';
   styleUrls: ['./menudetails.component.css']
 })
 export class MenudetailsComponent implements OnInit {
-  @Input() menu:Menu;
-
+  itemid;
   constructor(
     private route:ActivatedRoute,
-    private MenuService:MenuService,
+    private service: ShareService,) { }
+
+    
+  ngOnInit() {
+    this.route.params.subscribe(params=>{
+      this.itemid = params.itemid;  
+    });
+    
+  }
   
-  ) { }
-
-  getMenu():void{
-const id= + this.route.snapshot.paramMap.get('id');
-this.MenuService.getMenu(id).subscribe(menu=>this.menu=menu);
-  }
-
-  ngOnInit():void {
-    this.getMenu();
-  }
 
 }

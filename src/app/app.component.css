@@ -1,41 +1,25 @@
-
-
 .navbar{
     background-color: currentColor;
-    height: 60%;
 
 }
 .navbar li a {
-    color: white;}
-
-.navbar-right{
-    margin-right: 13%;
+    color: white;
+    text-decoration: none; 
+    font-size: 18px; 
+    cursor: pointer;   
 }
-.navbar-brand{
-    background-color: black;
-    color:white;
-    font-family: elephant;
+.nav-home{
+    margin-left: 17%;
 }
-
-
-.home-div{   
-    position: relative;
-    display: inline-block;
+.navbar-nav{
+    margin-right: 7%;
 }
-
-
-.btn btn-info btn-lg{
-padding: 16px;
-font-size: 16px;
-cursor: pointer;
-}
-
 
 
 
 /* css footer-section */
 
-footer{
+/* footer{
     background-color: black;
     height:200%;
     margin-top: auto;
@@ -84,3 +68,7 @@ footer{
       .information-container{
           background-color: blanchedalmond;
       }
+
+      .footer-container{
+          margin-top: 10%;
+      } */

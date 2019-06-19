@@ -1,0 +1,8 @@
+table.table-hover tbody tr:hover{
+    cursor: pointer;
+}
+tr {
+    line-height: 25px;
+    min-height: 25px;
+    height: 25px;
+ }  

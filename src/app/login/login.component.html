@@ -7,14 +7,14 @@
   <title>LogIn</title>
 </head>
 <body>
-  <h1>Log In</h1>
-  
-    <section id = "form-signin">
+  <h2>Log In</h2>  
+    
         <div class="container ">
         <form [formGroup]="form" (ngSubmit)="login()">
           <div class="form-group">
-             <label for="username">Email</label>
-             <input type="text" class="form-control" formControlName="username" placeholder="Email Address">
+             <label id="email" for="username">Email</label>
+             <input type="email" class="form-control" formControlName="username"
+               placeholder="Email Address" required>
              <div *ngIf="form.controls.username.touched 
           && !form.controls.username.valid" class="alert alert-danger">
                   Email is required
@@ -22,7 +22,7 @@
           </div>
           <!-- password field -->
           <div class="form-group">
-          <label for="password">Password</label>
+          <label id="password" for="password" >Password</label>
           <input type="password" class="form-control" formControlName="password" placeholder="Password">
           <div *ngIf="form.controls.password.touched && form.controls.password.errors">
               <div *ngIf="form.controls.password.errors.invalidLogin" 
@@ -37,16 +37,14 @@
         class="alert alert-danger">
                   Password cannot contain space.
               </div>
-            </div>
-          <div *ngIf ="invalidLoginMessage" class=" alert alert-danger">
-          {{invalidLoginMessage}}  
-          </div>     
+            </div>               
         </div>  
-            
-          <button class="btn btn-primary" type="submit">Login</button>
+        <div *ngIf ="invalidLoginMessage" class=" alert alert-danger">
+          {{invalidLoginMessage}}  
+          </div> 
+          <button class="btn btn-success btn-block" type="submit">Login</button>
         </form>
         </div>
-        </section>
-  
+          
 </body>
 </html>

@@ -11,35 +11,40 @@
 
 <body>
   <section id="resturantmenu">
-     
-          <h2>"Good Food is Good Mood!!" </h2>
-          <h4>All Family Tradition Recipes, Everything is Fresh HomeMade From Scratch</h4>
-      
-    
+
+    <h2>"Good Food is Good Mood!!" </h2>
+    <h5>All Family Tradition Recipes, Everything is Fresh HomeMade From Scratch</h5>
+
+
     <div class="container">
-        
+
       <div class="row">
-         <div class="col-md-4 col-sm-6" *ngFor="let menu of menus">  <!--ngFor is like foreach loop in c-sharp -->
-          
+        <div class="col-md-4 col-sm-6" *ngFor="let mns of menus | async">
+          <!--ngFor is like foreach loop in c-sharp -->
+
           <div class="media-object">
-            <div class="mydivouter" >
-              <img src="{{ menu.imageUrl}}">
-              <input type="button" class="mybuttonoverlap btn btn-info btn-lg" value="View Details" routerLink="/detail/{{menu.id}}"/> 
+            <div class="mydivouter">
+              <img class= "img-thumbnail" src="{{mns.data.imageUrl}}" >
+              <!-- <input type="button" class="mybuttonoverlap btn btn-info btn-lg" value="View Details"
+              routerLink="/detail/{{mns.itemid}}"/> -->
+              <a [routerLink]="['/detail', mns.id]">link
+
+              </a>
             </div>
           </div>
           <div id="description">
-            <span class="badge">{{menu.id}}</span><span>{{menu.name}} </span>
-            <app-rating [rating]="menu.rating" [numOfReviews]="menu.numOfReviews"> -->
-             </app-rating> 
-            <div><span>Price:{{menu.Price }}</span></div>
-            
-          </div>         
+           <!-- <span class="badge">{{mns.data.itemid}}</span> -->
+           <span>{{mns.data.name}} </span>
+
+            <div><span>Price:{{mns.data.price}} dk</span></div>
+
+          </div>
 
         </div>
       </div>
 
     </div>
-  </section> 
+  </section>
   <!-- <app-menu-detail [menu]="selectedMenu"></app-menu-detail> -->
 </body>
 
